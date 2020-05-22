@@ -204,17 +204,17 @@ class ScriptAry
 		if ($this->ext_type == 'plugin')
 		{
 			// Remove min js and css
-			foreach (array('js', 'css') as $ftype)
-			{
-				$path = JPATH_ROOT . '/plugins/' . $this->ext_group . '/' . $this->ext_name . '/';
-				$pattern = '.*min\.' . $ftype . '';
-				$files = JFolder::files($path, $pattern, true, true);
+			// foreach (array('js', 'css') as $ftype)
+			// {
+			// 	$path = JPATH_ROOT . '/plugins/' . $this->ext_group . '/' . $this->ext_name . '/';
+			// 	$pattern = '.*min\.' . $ftype . '';
+			// 	$files = JFolder::files($path, $pattern, true, true);
 
-				foreach ($files as $fll)
-				{
-					JFile::delete($files);
-				}
-			}
+			// 	foreach ($files as $fll)
+			// 	{
+			// 		JFile::delete($files);
+			// 	}
+			// }
 
 			$extensionTable = JTable::getInstance('extension');
 
